@@ -15,6 +15,9 @@ The host system is required to have the following installed in order for this to
 - grub-install
 - perl
 - ncurses
+- gmp-dev
+- bison
+- flex
 
 Easiest method for installing these packages are via the package manager for respective host (eg. apt, yum). However, these can be installed from source if required.
 
