@@ -50,3 +50,9 @@ cd -
 cd Dependencies/linux
 helpers/build_kernel.sh
 cd -
+
+helpers/build_default_packages.sh
+
+if [ ! -z $BUILD_OPTIONAL ]; then
+    helpers/build_optional_packages.sh
+fi

@@ -18,3 +18,7 @@
 	path = Dependencies/busybox
 	url = https://github.com/mirror/busybox.git
 	ignore = dirty
+[submodule "Dependencies/bootscripts-standard"]
+	path = Dependencies/bootscripts-standard
+	url = https://github.com/cross-lfs/bootscripts-standard.git
+	ignore = dirty

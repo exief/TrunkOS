@@ -27,7 +27,44 @@ git submodule update --init --recursive --remote
 ```
 
 ## Build process
+
+This project can be built in two ways; shell script or using make.
+
+### Build from shell
 ```bash
 chmod +x build.sh 
 ./build.sh
 ```
+
+### Build with make
+Make support is still work in progress 
+```bash
+# Build base OS and default included packages
+make
+# Build image that can be installed
+make image
+# Install image onto disk
+make DD=/dev/sdd install
+```
+
+## Default installed packages
+The following packages are installed by default to make usage and further installation of packages easier.
+
+- OpenSSH
+- OpenSSL
+- Curl
+- git
+- Make
+- autoconf
+- zlib
+
+
+## Optionally included packages
+The following packages install scripts are found within the packages.d/optional folder and can be included in the initial os build by copying the shell script to the packages.d directory prior to build
+
+- CMake
+- LLVM (Requires CMake)
+- Python (Requires SQLite3)
+- SQLite3
+
+Adding these will increase footprint of installed system and boot time.
